@@ -1,0 +1,44 @@
+input#autocomplete {
+    width: 500px;
+    border-width:1px;
+    border-style:solid;
+}
+#nameList {
+    /*background: white;*/
+    border: #a37334 solid 1px;
+    border-top:0;
+    width: 498px;
+    margin:0;
+    /*position:relative;
+    top: -1em;*/
+    overflow:hidden;
+    /*display:none;*/
+}
+#nameList ul {
+    margin:0;
+    padding:0;
+    list-style-type:none;
+}
+#nameList ul li {
+    list-style-image:none;
+    padding:0 0.25em;
+    cursor:pointer;
+    /*border-bottom:1px solid #a37334;*/
+    margin:0;
+    height:25px;
+    background: #f0d3ad;
+}
+#nameList ul li.selected {
+    background: #f0d3ad url(../images/web/menu_glow.png) repeat-x;
+    color:white;
+}
+.informal {
+    font-size:60%;
+    padding-left:2em;
+    text-align: right;
+    position: relative;
+    right:0;
+    /*margin:0;*/
+    display:block;
+    top:-1.75em;
+}

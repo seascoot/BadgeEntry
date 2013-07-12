@@ -1,0 +1,69 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <title>Installation Instructions - BadgeEntry</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" href="../../assets/css/mainstyle.css" media="screen,handheld,projection" />
+    <link rel="shortcut icon" href="../../images/web/favicon.ico" />
+    <style type="text/css">
+        h2.text {
+            margin-top:2em;
+        }
+        ul li, ol li {
+            margin-top:1em;
+            margin-bottom:1em;
+        }
+        #sidebar li {
+            margin-top:0;
+            margin-bottom:0;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="main-div">
+      <ul id="menu">
+        <li class="name"><a href="../../">BadgeEntry</a></li>
+        <li><a href="../../">Home</a></li>
+        <li><a href="./">Help</a>
+        <li><a href="about.html">About BadgeEntry</a>
+      </ul>
+      <h1>Installing BadgeEntry</h1>
+      <!--div id="sidebar">
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#server">Server</a></li>
+          <li><a href="#kiosk">Kiosk</a></li>
+          <li><a href="#printing">Printing Station</a></li>
+          <li><a href="#other">Other Equipment</a></li>
+        </ul>
+      </div-->
+      <ol>
+        <li>Make sure that you've completed the <a href="prerequisites.html">prerequisites</a> and that your computers are connected to the network (via your router).</li>
+        <li><p><a href="https://sourceforge.net/project/platformdownload.php?group_id=202511">Download BadgeEntry</a> and extract the file somewhere. Copy the <i>contents</i> of the resulting folder to your server's web root (Linux users: Be sure to copy across the file .htaccess which is most likely hiden by default). The web root (also called the document root) is the default place where your server looks to find web documents, such as BadgeEntry.</p>
+          <ul>
+            <li>If you use XAMPP, check the <a href="http://xampp.org/">XAMPP website</a> for instructions. For example, if you're a Windows user who installed XAMPP using the installer and accepting all the defaults, the web root would be <code>C:\Program Files\xampp\htdocs</code>.</li>
+            <li>If you use the version of Apache that's available from the Ubuntu Linux repositories, the web root is <code>/var/www/apache2-default</code>.</li>
+          </ul></li>
+        <li>Navigate to <code>&lt;where you installed BadgeEntry>/system/application/config</code> and open the file <code>database-template.php</code> with a text editor such as Notepad on Windows or gedit on Linux. Do not use Microsoft Word! Edit the file to match your MySQL settings. The default should work with XAMPP. Remember the database name you configured. When you're finished, save the file, then rename it to <code>database.php</code></li>
+        <li>Create the database:
+          <ol>
+            <li>Open up a command prompt (terminal) window (Windows users: Press &lt;WinKey>R, then type <code>cmd</code>).</li>
+            <li>Windows users only: Assuming that you installed XAMPP in C:\Program Files\xampp, type <code>cd&nbsp;\progra~1\xampp\mysql\bin</code>. Adjust the command if necessary to reflect where you installed XAMPP.</li>
+            <li>Type <code>mysqladmin --user=your_username --password create BadgeEntry</code> and press &lt;enter>. Substitute your MySQL username where indicated. If you're using XAMPP, the username is <code>root</code> and there's no password so you can omit the --password part. If you configured a database name other than BadgeEntry make the appropriate substitution.</li>
+          </ol></li>
+        <li><p>Make a note of your IP address. If you don't know your IP address:</p>
+          <ul>
+            <li>Linux users: Open up a terminal and type <code>ifconfig</code>. Ignoring the <code>lo</code> section, find where it says, "inet addr:x.x.x.x" where x is a number between 0 and 255. Most likely, your IP address will start with 192.168. NOTE: The IP address 127.0.0.1 isn't the one you're looking for.</li>
+            <li>Windows users: Open up a command prompt window (Start > Run > type <code>cmd</code> and hit &lt;enter&gt;) and type <code>ipconfig&nbsp;/all</code>. Press &lt;Enter>. Find your IP address there. It's a series of four numbers separated by dots, e.g., 192.168.1.100. Most likely it will begin with "192.168". Note that 127.0.0.1 is <em>not</em> what you're looking for.</li>
+            <li>If your server's IP address ever changes, you'll have to open up a browser on your server and navigate (using the new IP address) to the BadgeEntry settings screen, where you can update BadgeEntry. To prevent this problem from occurring, you can make sure your IP address doesn't change by either: (a) Making sure that you always turn your server on before any other computer on the network; or (b) configuring your server to use a static IP address.</li>
+          </ul></li>
+        <li>Open up a web browser and type <code>http://&lt;your server's IP address></code>. For example, if your server's IP address is 192.168.1.50, type <code>http://192.168.1.50</code>. If you installed BadgeEntry in a folder below your web root, you'll have to include that, too.</li>
+        <li>If you did everything right, you should see the BadgeEntry setup screen. Follow the directions there to complete the installation.</li>
+        <li>You're done! Yay! You can now access BadgeEntry from any computer on your network by opening a web browser and typing the same address that you used during the install.</li>
+      </ol>
+      <div id="footer">
+        <p>BadgeEntry &copy; 2007 by <a href="http://www.scottseverance.us/">Scott Severance</a></p>
+      </div>
+    </div>
+  </body>
+</html>

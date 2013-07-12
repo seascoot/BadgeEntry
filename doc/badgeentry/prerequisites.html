@@ -1,0 +1,76 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en">
+  <head>
+    <title>Prerequisites - BadgeEntry</title>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+    <link rel="stylesheet" href="../../assets/css/mainstyle.css" media="screen,handheld,projection" />
+    <link rel="shortcut icon" href="../../images/web/favicon.ico" />
+    <style type="text/css">
+        h2.text {
+            margin-top:2em;
+        }
+        ul li {
+            margin-top:1em;
+            margin-bottom:1em;
+        }
+        #sidebar li {
+            margin-top:0;
+            margin-bottom:0;
+        }
+    </style>
+  </head>
+  <body>
+    <div id="main-div">
+      <ul id="menu">
+        <li class="name"><a href="../../">BadgeEntry</a></li>
+        <li><a href="../../">Home</a></li>
+        <li><a href="./">Help</a>
+        <li><a href="about.html">About BadgeEntry</a>
+      </ul>
+      <h1>About BadgeEntry</h1>
+      <div id="sidebar">
+        <ul>
+          <li><a href="#overview">Overview</a></li>
+          <li><a href="#server">Server</a></li>
+          <li><a href="#kiosk">Kiosk</a></li>
+          <li><a href="#printing">Printing Station</a></li>
+          <li><a href="#other">Other Equipment</a></li>
+        </ul>
+      </div>
+      <h2 class="text" id="overview">Overview</h2>
+        <p>BadgeEntry runs over a network. It is powered by a server, and one or more other computers use the network to communicate with BadgeEntry. This page details the prerequisites for running BadgeEntry.</p>
+      <h2 class="text" id="server">Server</h2>
+        <p>The computer you actually install BadgeEntry on is called the server. It has a number of software requirements. The good news is that these requirements only apply to the server. Any other computers you use with BadgeEntry have very minimal requirements. Here are the server requirements; you'll need to install these before installing BadgeEntry:</p>
+        <ul>
+            <li>Operating system: any operating system that supports the prerequisites will do. Linux, MacOS X and Windows XP and Vista should all work. There may be others that work, as well.</li>
+            <li>Server software: PHP 5, MySQL, and a web server such as Apache. The easiest way to get all this is to install <a href="http://www.apachefriends.org/en/xampp.html">XAMPP</a> (or XAMPP Lite), which gets you everything you need in a single, preconfigured package. XAMPP also comes with a ton of stuff you don't need in order to run BadgeEntry. If you want to avoid having extra software on your machine, you can install PHP 5, MySQL, and Apache separately; however, the process isn't for the inexperienced.</li>
+            <!--li><p>A web server. <a href="http://httpd.apache.org/">Apache</a> is the web server BadgeEntry has been tested on; however, others such as LighTTPD or Microsoft's IIS should theoretically work.</p>
+              <p>APACHE INSTALLATION NOTE: Windows users should visit the <a href="http://httpd.apache.org/download.cgi">download</a> page and grab the "Win32 binary". Linux users should use the version of Apache provided by their distribution. For example, Ubuntu users should install the package <code>apache2-mpm-prefork</code>.</p></li>
+              <li><a href="http://mysql.org/downloads/">MySQL Community Server</a> (technically, any MySQL server will do, but why pay money when the Community Server is free?). Again, Linux users should use the version of MySQL that's available from their distro. Support for SQLite is planned for a future version of BadgeEntry, which should simplify installation greatly.</li>
+            <li><a href="http://www.php.net/downloads.php">PHP 5</a>. PHP 5 provides the underpinnings for BadgeEntry. Note that BadgeEntry currently does not work with PHP 4. Be sure to install support for MySQL; it isn't included by default.</li-->
+        </ul>
+      <h2 class="text" id="kiosk">Kiosk</h2>
+        <p>The kiosk is the scanning station where people scan their badges on entry and exit. It can be just about any computer (it could even be the same machine as the server). If you have a large group, you might want to run several kiosks. Each kiosk requires the following:</p>
+        <ul>
+            <li>A web browser capable of operating in full screen mode without any toolbars, menu bars, or status bars visible. <a href="http://www.getfirefox.com/">Firefox</a> with the <a href="https://addons.mozilla.org/en-US/firefox/addon/4650">FullerScreen</a> add-on (or something similar) and <a href="http://www.opera.com/">Opera</a> are both good choices. Microsoft Internet Explorer might or might not work. I refuse to use Internet Exporer, so I don't know.</li>
+            <li>A barcode scanner that meets the requirements <a href="#other">below</a>. Note: If you just want to try BadgeEntry out, you can skip the scanner for now. The kiosk allows you to manually type in a four-digit barcode number to simulate a scanner.</li>
+        </ul>
+        <p>Because the kiosk is intended to function as a scanning station, it doesn't need a keyboard or mouse once placed in kiosk mode. It's a good idea to keep the keyboard and mouse out of reach to prevent mischief. Also, because it's a scanning station, it shouldn't serve any other function&mdash;the exception is that a kiosk can double as the server with no problem.</p>
+      <h2 class="text" id="printing">Printing Station</h2>
+        <p>The printing station is simply a computer that is able to print. It needs a web browser (such as <a href="http://www.getfirefox.com/">Firefox</a>) and a program to display PDF documents (such as <a href="http://www.adobe.com/products/acrobat/readstep2.html">Adobe [Acrobat] Reader</a>).</p>
+        <p>Your printer needs to be able to print on index cards (most can). You'll need a supply of unruled 3x5-inch index cards to print the badges on.</a>
+      <h2 class="text" id="other">Other Equipment</h2>
+        <ul>
+          <li>You'll want a computer for registration and to control the kiosk(s). The printing station can easily perform this task, or you can use an additional computer. If you want to use the random volunteer feature, you should consider setting up a computer where whe person in the front can access it.</li>
+          <li>You'll probably want to include photos on the badges you print. If so, you'll need a digital camera and a way to connect it to one of your computers so you can download the pictures from the camera.</li>
+          <li>You'll need a barcode scanner with a keyboard wedge connection. A keyboard wedge makes the scaner "type" the barcode as if it were a keyboard. They come in USB and PS/2 varieties. Your scanner will need to support Code 39 barcodes (most do), unless you want to re-generate the barcodes. Scanners don't have to be expensive. I bought a good quality name brand used laser scanner on <a href="http://search.ebay.com/barcode-scanner">eBay</a> for about $35 USD including shipping. I don't recommend that you buy a CueCat scanner. They simply don't work well. Even after practice, I wasn't able to get a correct scan more than 25% of the time.</li>
+          <li>Finally, you'll need a router to network your computers together. If you have a broadband Internet connection and share it between multiple computers, you probably have what you need already. If you don't, you probably know someone who does. Maybe they'll lend you their router.</li>
+        </ul>
+      <h2 class="text">What's Next?</h2>
+        <p>To continue, <a href="install.html">install BadgeEntry</a>.</p>
+      <div id="footer">
+        <p>BadgeEntry &copy; 2007 by <a href="http://www.scottseverance.us/">Scott Severance</a></p>
+      </div>
+    </div>
+  </body>
+</html>

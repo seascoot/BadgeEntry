@@ -1,0 +1,101 @@
+/*
+==== Colors ====
+Blue:    #3465a4
+Purple:  #7334a3
+Brown:   #a37334
+Green:   #64a334
+*/
+
+body {
+    font-family:Verdana,Arial,sans-serif;
+    color:white;
+    background:#3465a4;
+}
+body.error {
+    background:#f33;
+}
+body.success {
+    background: #64a334;
+}
+h1 {
+	font-size:100%;
+	font-variant:small-caps;
+	letter-spacing:0.3em;
+	margin:0;
+	padding:15px 0 15px 65px;
+	background:no-repeat url(../images/web/icon-48.png);
+	color:#ccc;
+}
+#meeting {
+    position:absolute;
+    top:15px;
+    right: 15px;
+    background:#6798d7;
+    padding:0.25em;
+    border:solid 2px #4576b5;
+}
+#meeting p {
+    text-align:right;
+    font-size:80%;
+    margin:0;
+}
+#welcome { /* wrapper */
+    
+}
+#welcome .event {
+    font-variant:small-caps;
+    font-size:150%;
+    font-weight:bold;
+    letter-spacing:0.2em;
+    text-align:center;
+    margin-top:1.5em;
+}
+#welcome .warning {
+    text-align:center;
+    margin:60px;
+    padding:1em;
+    border:solid 5px white;
+    font-size:250%;
+    text-transform:capitalize;
+    background: #f33;
+}
+#welcome .warning p {
+    font-size:50%;
+}
+#welcome .instructions {
+    border: 5px solid #4576b5;
+    background: #6798d7;
+    padding:1em;
+    margin:0 60px;
+    font-weight:bold;
+    letter-spacing:0.1em;
+    text-align:center;
+}
+#welcome .successMessage {
+    padding:20px;
+    text-align:center;
+    font-size:500%;
+    font-weight:bold;
+    margin-top:50px;
+}
+#welcome .successMessage img {
+    border:10px #7334a3 outset;
+    float:right;
+    margin: -20px 25px 0 25px;
+    padding: 5px;
+    background:white;
+}
+#idBox {
+    background:transparent;
+    border:none;
+    width:3em;
+    text-align:right;
+    font-size:50%;
+    color:white;
+    position:absolute;
+    top:8em;
+    right:15px;
+}
+#newMode {
+    display:none;
+}
