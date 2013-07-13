@@ -17,7 +17,6 @@ I have updated the code to work with CodeIgniter framework version 2.1.3 and add
 - Templating Engine
 	- Twitter Bootstrap and Bootswatch Themes
 	- Build your own themes
-- Scan and print ID badges
 - Client Side Form Validation using CodeIgniter's Server Side rules.
 
 ***
